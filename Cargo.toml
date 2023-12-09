@@ -1,0 +1,24 @@
+[package]
+name = "auth-service"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Common lib
+common = { path = "../common" }
+
+actix-web = "4.4.0"
+dotenvy = "0.15.7"
+mongodb = { version = "2.7.1", features = ["bson-chrono-0_4"] }
+anyhow = "1.0.75"
+uuid = "1.6.1"
+serde = "1.0.193"
+chrono = { version = "0.4.31", features = ["serde"] }
+validator = { version = "0.16.1", features = ["derive"] }
+regex = "1.10.2"
+lazy_static = "1.4.0"
+serde_json = "1.0.108"
+log = "0.4.20"
+lettre = { version = "0.11.2", features = ["smtp-transport", "tokio1", "tokio1-native-tls"] }
